@@ -41,6 +41,8 @@ ENV PATH="/opt/venv/bin:$PATH"
 
 # Copy application code
 COPY app/ ./app/
+# ✅ Copy static files 
+COPY static/ ./static/
 
 # Set ownership to non-root user
 RUN chown -R appuser:appgroup /app
